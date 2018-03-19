@@ -1,0 +1,9 @@
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.deps.json
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.dll
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.pdb
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.AssemblyInfoInputs.cache
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.AssemblyInfo.cs
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.dll
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.pdb
+C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.csprojResolveAssemblyReference.cache
