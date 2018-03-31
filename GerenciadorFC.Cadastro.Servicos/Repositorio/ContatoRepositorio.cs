@@ -31,7 +31,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		}
 		public List<Contato> ObterLista()
 		{
-			return ctx.Set<Contato>().Where(c => c.Excluido).ToList();
+			return ctx.Set<Contato>().Where(c => c.Excluido == false).ToList();
 		}
 		public Contato ObterPorCodigo(int codigo)
 		{

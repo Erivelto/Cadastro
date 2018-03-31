@@ -7,3 +7,12 @@ C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Domini
 C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.AssemblyInfo.cs
 C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.dll
 C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.pdb
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\bin\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.deps.json
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\bin\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.dll
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\bin\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.pdb
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.csprojResolveAssemblyReference.cache
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.csproj.CoreCompileInputs.cache
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.AssemblyInfoInputs.cache
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.AssemblyInfo.cs
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.dll
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Dominio\obj\Debug\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.pdb

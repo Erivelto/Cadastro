@@ -1,9 +1,11 @@
 ﻿using GerenciadorFC.Cadastro.Dominio.Implementacao;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace GerenciadorFC.Cadastro.Servicos.Controllers
 {
+	//[Authorize]
     [Route("api/Endereco")]
     public class EnderecoController : Controller
     {

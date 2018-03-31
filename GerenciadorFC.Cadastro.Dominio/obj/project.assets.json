@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\projeto\\GerenciadorFC.Cadastro\\GerenciadorFC.Cadastro.Dominio\\GerenciadorFC.Cadastro.Dominio.csproj",
+      "projectUniqueName": "C:\\projeto\\GerenciadorFC.Cadastro\\Cadastro\\GerenciadorFC.Cadastro.Dominio\\GerenciadorFC.Cadastro.Dominio.csproj",
       "projectName": "GerenciadorFC.Cadastro.Dominio",
-      "projectPath": "C:\\projeto\\GerenciadorFC.Cadastro\\GerenciadorFC.Cadastro.Dominio\\GerenciadorFC.Cadastro.Dominio.csproj",
+      "projectPath": "C:\\projeto\\GerenciadorFC.Cadastro\\Cadastro\\GerenciadorFC.Cadastro.Dominio\\GerenciadorFC.Cadastro.Dominio.csproj",
       "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-      "outputPath": "C:\\projeto\\GerenciadorFC.Cadastro\\GerenciadorFC.Cadastro.Dominio\\obj\\",
+      "outputPath": "C:\\projeto\\GerenciadorFC.Cadastro\\Cadastro\\GerenciadorFC.Cadastro.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

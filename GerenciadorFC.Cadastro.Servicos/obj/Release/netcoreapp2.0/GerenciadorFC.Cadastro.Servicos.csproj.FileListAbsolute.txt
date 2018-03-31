@@ -11,3 +11,16 @@ C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Servic
 C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.AssemblyInfo.cs
 C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.dll
 C:\Users\fabio\source\repos\GerenciadorFC.Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.pdb
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.deps.json
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.runtimeconfig.json
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.runtimeconfig.dev.json
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.dll
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.pdb
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.dll
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\bin\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Dominio.pdb
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.csprojResolveAssemblyReference.cache
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.csproj.CoreCompileInputs.cache
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.AssemblyInfoInputs.cache
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.AssemblyInfo.cs
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.dll
+C:\projeto\GerenciadorFC.Cadastro\Cadastro\GerenciadorFC.Cadastro.Servicos\obj\Release\netcoreapp2.0\GerenciadorFC.Cadastro.Servicos.pdb

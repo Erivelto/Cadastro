@@ -26,7 +26,14 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		}
 		public Endereco ObterPorCodigo(int codigo)
 		{
-			return ctx.Set<Endereco>().Where(x => x.Codigo == codigo && x.Excluido == false).FirstOrDefault();
+			if (codigo > 0)
+				return ctx.Set<Endereco>().Where(x => x.CodigoPessoa == codigo && x.Excluido == false).FirstOrDefault();
+			else
+			{
+				codigo = codigo * (-1);
+				return ctx.Set<Endereco>().Where(x => x.CodigoRepLegal == codigo && x.Excluido == false).FirstOrDefault();
+
+			}
 		}
 
 		public bool Excluir(int codigo)

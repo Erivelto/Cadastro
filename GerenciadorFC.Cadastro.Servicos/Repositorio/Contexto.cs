@@ -37,6 +37,14 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<Pessoa>().Property(p => p.Status).IsRequired();
 			modelBuilder.Entity<Pessoa>().Property(p => p.TipoPessoa).IsRequired();
 			modelBuilder.Entity<Pessoa>().Property(p => p.Excluido).HasDefaultValue(false);
+			modelBuilder.Entity<Pessoa>().Property(p => p.IncricaoMunicipal).HasMaxLength(10);
+			modelBuilder.Entity<Pessoa>().Property(p => p.Nome).HasMaxLength(150);
+			modelBuilder.Entity<Pessoa>().Property(p => p.IncricaoMunicipal).HasMaxLength(10);
+			modelBuilder.Entity<Pessoa>().Property(p => p.CNAE).HasMaxLength(100);
+			modelBuilder.Entity<Pessoa>().Property(p => p.DescricaoAtividade).HasMaxLength(200);
+
+
+
 
 			//RepresentanteLegal
 
@@ -48,6 +56,8 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<RepresentanteLegal>().Property(r => r.DataInclisao).IsRequired();
 			modelBuilder.Entity<RepresentanteLegal>().Property(r => r.Status).IsRequired();
 			modelBuilder.Entity<RepresentanteLegal>().Property(r => r.Excluido).HasDefaultValue(false);
+			modelBuilder.Entity<RepresentanteLegal>().Property(p => p.Passaporte).HasMaxLength(20);
+
 
 			//Contabilidade
 
@@ -69,6 +79,8 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<Contato>().Property(c => c.DDD).HasMaxLength(4);
 			modelBuilder.Entity<Contato>().Property(c => c.Telefone).HasMaxLength(10);
 			modelBuilder.Entity<Contato>().Property(c => c.DDDC).HasMaxLength(4);
+			modelBuilder.Entity<Contato>().Property(c => c.Site).HasMaxLength(40);
+			modelBuilder.Entity<Contato>().Property(c => c.email).HasMaxLength(30);
 			modelBuilder.Entity<Contato>().Property(c => c.Celular).HasMaxLength(10);
 			modelBuilder.Entity<Contato>().Property(c => c.Excluido).HasDefaultValue(false);
 
