@@ -22,6 +22,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		public DbSet<PessoaContabil> PessoaContabils { get; set; }
 		public DbSet<TipoLogin> TipoLogins { get; set; }
 		public DbSet<TipoPessoa> TipoPessoas { get; set; }
+		public DbSet<PessoaEmissaoNFe> PessoaEmissaoNFe { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseSqlServer(@"Server=tcp:gerenciadorbilhetagem.database.windows.net,1433;Initial Catalog=dbCadastro; Uid=fabioesimoes; Pwd=q1w2e3r4@;");
@@ -115,7 +116,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<PessoaFiscal>().Property(p => p.CodigoFiscal).HasMaxLength(50);
 			modelBuilder.Entity<PessoaFiscal>().Property(p => p.CodigoPessoa).IsRequired();
 			modelBuilder.Entity<PessoaFiscal>().Property(p => p.TipoEmpresa).HasMaxLength(50);
-			modelBuilder.Entity<PessoaFiscal>().Property(p => p.AnexoFiscal).HasMaxLength(200);
 			modelBuilder.Entity<PessoaFiscal>().Property(p => p.Excluido).HasDefaultValue(false);
 
 			//PessoaLogin
@@ -132,8 +132,22 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			//TipoPessoa
 			modelBuilder.Entity<TipoPessoa>().HasKey(t => t.Codigo);
 			modelBuilder.Entity<TipoPessoa>().Property(t => t.Tipo).HasMaxLength(10);
-		}
 
-		
+			modelBuilder.Entity<PessoaEmissaoNFe>().HasKey(t => t.Codigo);
+			modelBuilder.Entity<PessoaEmissaoNFe>().Property(t => t.CodigoPessoa).IsRequired();
+			modelBuilder.Entity<PessoaEmissaoNFe>().Property(p => p.Excluido).HasDefaultValue(false);
+
+			modelBuilder.Entity<DadosNota>().HasKey(t => t.Codigo);
+			modelBuilder.Entity<DadosNota>().Property(t => t.CodigoVerificacao).HasMaxLength(20);
+			modelBuilder.Entity<DadosNota>().Property(p => p.Excluido).HasDefaultValue(false);
+
+			modelBuilder.Entity<ItensNotas>().HasKey(t => t.Codigo);
+			modelBuilder.Entity<ItensNotas>().Property(p => p.Excluido).HasDefaultValue(false);
+
+			modelBuilder.Entity<PessoaFiscalHistorico>().HasKey(t => t.Codigo);
+
+			modelBuilder.Entity<AnexoFiscal>().HasKey(t => t.Codigo);
+
+		}		
 	}
 }

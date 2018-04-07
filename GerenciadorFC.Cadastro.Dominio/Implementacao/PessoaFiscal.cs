@@ -10,7 +10,9 @@ namespace GerenciadorFC.Cadastro.Dominio.Implementacao
 		public int CodigoPessoa { get; set; }
 		public string CodigoFiscal { get; set; }
 		public string TipoEmpresa { get; set; }
-		public string AnexoFiscal { get; set; }
+		public string CodigoContribuite { get; set; }
 		public bool Excluido { get; set; }
+		public List<PessoaFiscalHistorico> pessoaFiscalHistorico { get; set; }
+		public List<AnexoFiscal> anexoFiscal { get; set; }
 	}
 }

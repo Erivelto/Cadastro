@@ -11,32 +11,15 @@ using System;
 namespace GerenciadorFC.Cadastro.Servicos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20180406233806_NotaNfe")]
+    partial class NotaNfe
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.AnexoFiscal", b =>
-                {
-                    b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Anexo");
-
-                    b.Property<bool>("Excluido");
-
-                    b.Property<int?>("PessoaFiscalCodigo");
-
-                    b.HasKey("Codigo");
-
-                    b.HasIndex("PessoaFiscalCodigo");
-
-                    b.ToTable("AnexoFiscal");
-                });
 
             modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.Contabilidade", b =>
                 {
@@ -122,16 +105,11 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
 
                     b.Property<int>("CodigoServico");
 
-                    b.Property<string>("CodigoVerificacao")
-                        .HasMaxLength(20);
+                    b.Property<string>("CodigoVerificacao");
 
                     b.Property<DateTime>("DataEmissao");
 
                     b.Property<DateTime>("DataEnvio");
-
-                    b.Property<bool>("Excluido")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValue(false);
 
                     b.Property<int>("NumeroNFE");
 
@@ -196,10 +174,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.Property<int?>("DadosNotaCodigo");
 
                     b.Property<string>("Descricao");
-
-                    b.Property<bool>("Excluido")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValue(false);
 
                     b.Property<int>("Quantidade");
 
@@ -304,10 +278,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
 
                     b.Property<int>("CodigoPessoa");
 
-                    b.Property<bool>("Excluido")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValue(false);
-
                     b.Property<string>("senha");
 
                     b.HasKey("Codigo");
@@ -320,7 +290,8 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.Property<int>("Codigo")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CodigoContribuite");
+                    b.Property<string>("AnexoFiscal")
+                        .HasMaxLength(200);
 
                     b.Property<string>("CodigoFiscal")
                         .HasMaxLength(50);
@@ -337,26 +308,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.HasKey("Codigo");
 
                     b.ToTable("PessoaFiscals");
-                });
-
-            modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaFiscalHistorico", b =>
-                {
-                    b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("DataGeracaoDAS");
-
-                    b.Property<bool>("EnviadoCliente");
-
-                    b.Property<int>("MesReferencia");
-
-                    b.Property<int?>("PessoaFiscalCodigo");
-
-                    b.HasKey("Codigo");
-
-                    b.HasIndex("PessoaFiscalCodigo");
-
-                    b.ToTable("PessoaFiscalHistorico");
                 });
 
             modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaLogin", b =>
@@ -448,13 +399,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.ToTable("TipoPessoas");
                 });
 
-            modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.AnexoFiscal", b =>
-                {
-                    b.HasOne("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaFiscal")
-                        .WithMany("anexoFiscal")
-                        .HasForeignKey("PessoaFiscalCodigo");
-                });
-
             modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.DadosNota", b =>
                 {
                     b.HasOne("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaEmissaoNFe")
@@ -467,13 +411,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.HasOne("GerenciadorFC.Cadastro.Dominio.Implementacao.DadosNota")
                         .WithMany("itensNotas")
                         .HasForeignKey("DadosNotaCodigo");
-                });
-
-            modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaFiscalHistorico", b =>
-                {
-                    b.HasOne("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaFiscal")
-                        .WithMany("pessoaFiscalHistorico")
-                        .HasForeignKey("PessoaFiscalCodigo");
                 });
 #pragma warning restore 612, 618
         }
