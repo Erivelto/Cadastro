@@ -16,5 +16,6 @@ namespace GerenciadorFC.Cadastro.Dominio.Implementacao
 		public string DDDC { get; set; }
 		public string Celular { get; set; }
 		public bool Excluido { get; set; }
+		public string UserId { get; set; }
 	}
 }

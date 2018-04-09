@@ -8,8 +8,7 @@ namespace GerenciadorFC.Cadastro.Dominio.Implementacao
     {
 		public int Codigo { get; set; }
 		public DateTime DataEnvio { get; set; }
-		public decimal ValorTotal { get; set; }
-		public int CodigoServico { get; set; }
+		public decimal ValorTotal { get; set; }		
 		public int  NumeroNFE{ get; set; }
 		public DateTime DataEmissao { get; set; }
 		public string CodigoVerificacao { get; set; }

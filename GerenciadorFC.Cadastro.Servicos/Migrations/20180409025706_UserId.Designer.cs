@@ -11,9 +11,10 @@ using System;
 namespace GerenciadorFC.Cadastro.Servicos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20180409025706_UserId")]
+    partial class UserId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,9 +107,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
 
                     b.Property<string>("Telefone")
                         .HasMaxLength(10);
-
-                    b.Property<string>("UserId")
-                        .HasMaxLength(100);
 
                     b.Property<string>("email")
                         .HasMaxLength(30);
@@ -407,23 +405,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.ToTable("PessoaLogins");
                 });
 
-            modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaTermoDeUso", b =>
-                {
-                    b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CodigoPessoa");
-
-                    b.Property<DateTime>("DataTermo");
-
-                    b.Property<string>("UserId")
-                        .HasMaxLength(100);
-
-                    b.HasKey("Codigo");
-
-                    b.ToTable("PessoaTermoDeUso");
-                });
-
             modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.RepresentanteLegal", b =>
                 {
                     b.Property<int>("Codigo")
@@ -459,6 +440,9 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                         .HasMaxLength(10);
 
                     b.Property<int>("Status");
+
+                    b.Property<string>("UserId")
+                        .HasMaxLength(100);
 
                     b.HasKey("Codigo");
 

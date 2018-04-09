@@ -23,6 +23,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		public DbSet<TipoLogin> TipoLogins { get; set; }
 		public DbSet<TipoPessoa> TipoPessoas { get; set; }
 		public DbSet<PessoaEmissaoNFe> PessoaEmissaoNFe { get; set; }
+		public DbSet<PessoaTermoDeUso> PessoaTermoDeUso { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseSqlServer(@"Server=tcp:gerenciadorbilhetagem.database.windows.net,1433;Initial Catalog=dbCadastro; Uid=fabioesimoes; Pwd=q1w2e3r4@;");
@@ -43,9 +44,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<Pessoa>().Property(p => p.IncricaoMunicipal).HasMaxLength(10);
 			modelBuilder.Entity<Pessoa>().Property(p => p.CNAE).HasMaxLength(100);
 			modelBuilder.Entity<Pessoa>().Property(p => p.DescricaoAtividade).HasMaxLength(200);
-
-
-
+			
 
 			//RepresentanteLegal
 
@@ -58,6 +57,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<RepresentanteLegal>().Property(r => r.Status).IsRequired();
 			modelBuilder.Entity<RepresentanteLegal>().Property(r => r.Excluido).HasDefaultValue(false);
 			modelBuilder.Entity<RepresentanteLegal>().Property(p => p.Passaporte).HasMaxLength(20);
+			
 
 
 			//Contabilidade
@@ -84,6 +84,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<Contato>().Property(c => c.email).HasMaxLength(30);
 			modelBuilder.Entity<Contato>().Property(c => c.Celular).HasMaxLength(10);
 			modelBuilder.Entity<Contato>().Property(c => c.Excluido).HasDefaultValue(false);
+			modelBuilder.Entity<Contato>().Property(p => p.UserId).HasMaxLength(100);
 
 			//Endereco
 			modelBuilder.Entity<Endereco>().HasKey(e => e.Codigo);
@@ -135,6 +136,8 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 
 			modelBuilder.Entity<PessoaEmissaoNFe>().HasKey(t => t.Codigo);
 			modelBuilder.Entity<PessoaEmissaoNFe>().Property(t => t.CodigoPessoa).IsRequired();
+			modelBuilder.Entity<PessoaEmissaoNFe>().Property(t => t.prefeitura).HasMaxLength(100);
+			modelBuilder.Entity<PessoaEmissaoNFe>().Property(t => t.urlPrefeitura).HasMaxLength(500);
 			modelBuilder.Entity<PessoaEmissaoNFe>().Property(p => p.Excluido).HasDefaultValue(false);
 
 			modelBuilder.Entity<DadosNota>().HasKey(t => t.Codigo);
@@ -147,7 +150,12 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<PessoaFiscalHistorico>().HasKey(t => t.Codigo);
 
 			modelBuilder.Entity<AnexoFiscal>().HasKey(t => t.Codigo);
+			
+			modelBuilder.Entity<PessoaCodigoServico>().HasKey(t => t.Codigo);
+			modelBuilder.Entity<PessoaCodigoServico>().Property(t => t.CodigoServico).HasMaxLength(20);
 
+			modelBuilder.Entity<PessoaTermoDeUso>().HasKey(t => t.Codigo);
+			modelBuilder.Entity<PessoaTermoDeUso>().Property(t => t.UserId).HasMaxLength(100);
 		}		
 	}
 }

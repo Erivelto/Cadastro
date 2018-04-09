@@ -11,9 +11,10 @@ using System;
 namespace GerenciadorFC.Cadastro.Servicos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20180409030834_UserIdContato")]
+    partial class UserIdContato
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -405,23 +406,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                     b.HasKey("Codigo");
 
                     b.ToTable("PessoaLogins");
-                });
-
-            modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.PessoaTermoDeUso", b =>
-                {
-                    b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CodigoPessoa");
-
-                    b.Property<DateTime>("DataTermo");
-
-                    b.Property<string>("UserId")
-                        .HasMaxLength(100);
-
-                    b.HasKey("Codigo");
-
-                    b.ToTable("PessoaTermoDeUso");
                 });
 
             modelBuilder.Entity("GerenciadorFC.Cadastro.Dominio.Implementacao.RepresentanteLegal", b =>

@@ -17,6 +17,6 @@ namespace GerenciadorFC.Cadastro.Dominio.Implementacao
 		public DateTime DataInclisao { get; set; }
 		public DateTime DataAlteracao { get; set; }
 		public int Status { get; set; }
-		public bool Excluido { get; set; }
+		public bool Excluido { get; set; }		
 	}
 }
