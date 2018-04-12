@@ -85,6 +85,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			modelBuilder.Entity<Contato>().Property(c => c.Celular).HasMaxLength(10);
 			modelBuilder.Entity<Contato>().Property(c => c.Excluido).HasDefaultValue(false);
 			modelBuilder.Entity<Contato>().Property(p => p.UserId).HasMaxLength(100);
+			modelBuilder.Entity<Contato>().Property(c => c.Tipo).HasMaxLength(30);
 
 			//Endereco
 			modelBuilder.Entity<Endereco>().HasKey(e => e.Codigo);

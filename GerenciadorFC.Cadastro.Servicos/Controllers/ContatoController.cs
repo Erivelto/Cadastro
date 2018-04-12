@@ -27,10 +27,10 @@ namespace GerenciadorFC.Cadastro.Servicos.Controllers
 		{
 			return _repositorio.ObterPorCodigo(codigo);
 		}
-		[HttpGet]
-		public List<Contato> Get()
+		[HttpGet]		
+		public List<Contato> Get(int codigoRep,int val = 0)
 		{
-			return _repositorio.ObterLista();
+			return _repositorio.ObterLista(codigoRep);
 		}
 		[HttpDelete]
 		public bool Delete(int codigo)

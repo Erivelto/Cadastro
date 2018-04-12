@@ -29,9 +29,9 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			ctx.SaveChanges();
 			return true;
 		}
-		public List<Contato> ObterLista()
+		public List<Contato> ObterLista(int codigo)
 		{
-			return ctx.Set<Contato>().Where(c => c.Excluido == false).ToList();
+			return ctx.Set<Contato>().Where(c => c.Excluido == false && c.CodigoRepLegal == codigo).ToList();
 		}
 		public Contato ObterPorCodigo(int codigo)
 		{

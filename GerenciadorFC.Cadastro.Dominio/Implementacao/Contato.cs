@@ -17,5 +17,7 @@ namespace GerenciadorFC.Cadastro.Dominio.Implementacao
 		public string Celular { get; set; }
 		public bool Excluido { get; set; }
 		public string UserId { get; set; }
+		public string Tipo { get; set; }
+		public DateTime DataExpiracao { get; set; }
 	}
 }
