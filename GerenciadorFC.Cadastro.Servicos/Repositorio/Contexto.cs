@@ -24,6 +24,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		public DbSet<TipoPessoa> TipoPessoas { get; set; }
 		public DbSet<PessoaEmissaoNFe> PessoaEmissaoNFe { get; set; }
 		public DbSet<PessoaTermoDeUso> PessoaTermoDeUso { get; set; }
+		public DbSet<PessoaCobranca> PessoaCobranca { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseSqlServer(@"Server=tcp:gerenciadorbilhetagem.database.windows.net,1433;Initial Catalog=dbCadastro; Uid=fabioesimoes; Pwd=q1w2e3r4@;");
@@ -157,6 +158,9 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 
 			modelBuilder.Entity<PessoaTermoDeUso>().HasKey(t => t.Codigo);
 			modelBuilder.Entity<PessoaTermoDeUso>().Property(t => t.UserId).HasMaxLength(100);
+
+			modelBuilder.Entity<PessoaCobranca>().HasKey(t => t.Codigo);
+			modelBuilder.Entity<PessoaCobranca>().Property(t => t.Transacao).HasMaxLength(200);
 		}		
 	}
 }
