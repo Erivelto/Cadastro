@@ -11,9 +11,10 @@ using System;
 namespace GerenciadorFC.Cadastro.Servicos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20180426025839_postCobranca")]
+    partial class postCobranca
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,8 +223,6 @@ namespace GerenciadorFC.Cadastro.Servicos.Migrations
                 {
                     b.Property<Guid>("codigo")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("Data");
 
                     b.Property<int>("codigoPessoa");
 
