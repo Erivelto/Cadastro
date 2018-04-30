@@ -28,6 +28,10 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
         {
             return ctx.Set<RepresentanteLegal>().Where(x => x.Codigo == codigo && x.Excluido == false).FirstOrDefault();
         }
+		public RepresentanteLegal ObterPorCodigoPessoa(int codigoPessoa)
+		{
+			return ctx.Set<RepresentanteLegal>().Where(x => x.CodigoPessoa == codigoPessoa && x.Excluido == false).FirstOrDefault();
+		}
 		public bool Excluir(int codigo)
 		{
 			var remove = ctx.RepresentanteLegals.Where(c => c.Codigo == codigo).FirstOrDefault();

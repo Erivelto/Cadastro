@@ -26,8 +26,8 @@ namespace GerenciadorFC.Cadastro.Servicos.Controllers
         public RepresentanteLegal Get(int codigo)
         {
             return _repositorio.ObterPorCodigo(codigo);
-        }
-        [HttpGet]
+        }	
+		[HttpGet]
         public List<RepresentanteLegal> Get()
         {
             return _repositorio.ObterLista();
