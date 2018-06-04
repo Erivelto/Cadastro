@@ -16,10 +16,19 @@ namespace GerenciadorFC.Cadastro.Servicos.Controllers
         }
         // GET: api/PessoaCobranca/5
         [HttpGet("{transacao}")]
-        public PessoaCobranca Get(string transacao)
+        public PessoaCobranca Get(string transacao = null, string referencia = null, string code = null)
         {
-            return _repositorio.ObterPorCodigo(transacao);
-        }        
+			var pessoacobranca = new PessoaCobranca();
+			if (transacao != null)
+				pessoacobranca = _repositorio.ObterPorCodigo(transacao);
+			if (referencia != null)
+				pessoacobranca = _repositorio.ObterPorReferencia(referencia);
+			if (code != null)
+				pessoacobranca = _repositorio.ObterPorCodePrepoval(code);
+
+			return pessoacobranca;
+
+		}        
         // POST: api/PessoaCobranca
         [HttpPost]
         public PessoaCobranca Post([FromBody]PessoaCobranca pessoaCobranca)

@@ -14,7 +14,7 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			ctx.Contatos.Add(contato);
 			ctx.SaveChanges();
 			return contato;
-		}
+		}		
 		public Contato Atualizar(Contato contato)
 		{
 			ctx.Entry(contato).State = EntityState.Modified;
@@ -28,6 +28,10 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 			ctx.Entry(remove).State = EntityState.Modified;
 			ctx.SaveChanges();
 			return true;
+		}
+		public Contato ObterPorUserId(string userId)
+		{
+			return ctx.Set<Contato>().Where(x => x.UserId == userId && x.Excluido == false).FirstOrDefault();
 		}
 		public List<Contato> ObterLista(int codigo)
 		{

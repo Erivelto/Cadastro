@@ -27,6 +27,11 @@ namespace GerenciadorFC.Cadastro.Servicos.Controllers
 		{
 			return _repositorio.ObterPorCodigo(codigo);
 		}
+		[HttpGet("UserId/{userId}")]
+		public Contato Get(string userId)
+		{
+			return _repositorio.ObterPorUserId(userId);
+		}
 		[HttpGet]		
 		public List<Contato> Get(int codigoRep,int val = 0)
 		{

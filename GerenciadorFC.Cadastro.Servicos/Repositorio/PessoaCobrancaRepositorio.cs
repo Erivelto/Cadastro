@@ -30,5 +30,13 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		{
 			return ctx.Set<PessoaCobranca>().Where(x => x.Transacao == transacao).FirstOrDefault();
 		}
+		public PessoaCobranca ObterPorReferencia(string referencia)
+		{
+			return ctx.Set<PessoaCobranca>().Where(x => x.Reference == referencia).FirstOrDefault();
+		}
+		public PessoaCobranca ObterPorCodePrepoval(string code)
+		{
+			return ctx.Set<PessoaCobranca>().Where(x => x.CodePrepoval == code).FirstOrDefault();
+		}
 	}
 }
