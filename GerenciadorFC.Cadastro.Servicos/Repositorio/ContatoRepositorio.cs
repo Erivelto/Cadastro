@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using GerenciadorFC.Cadastro.Dominio.Implementacao;
 using Microsoft.EntityFrameworkCore;
+using Dapper;
 
 
 namespace GerenciadorFC.Cadastro.Servicos.Repositorio
@@ -41,5 +44,47 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		{
 			return ctx.Set<Contato>().Where(x => x.Codigo == codigo && x.Excluido == false).FirstOrDefault();
 		}
+		public string ConsultaStatus(int CodigoPessoa)
+		{
+			using (IDbConnection db = new SqlConnection(@"Server=tcp:gerenciadorbilhetagem.database.windows.net,1433;Initial Catalog=dbCadastro; Uid=fabioesimoes; Pwd=q1w2e3r4@;"))
+			{
+				string select = "SELECT TOP (1) [Status]  FROM [dbo].[AspNetUsers]  where CodigoPessoa = @CodigoPessoa";
+
+				var result = db.ExecuteScalar(select, new
+				{
+					CodigoPessoa
+				});
+				return result.ToString();
+			}
+		}
+		public bool AtualizaStatus(int codigo)
+		{
+			var status = ConsultaStatus(codigo);
+			bool up = false;
+			if (status != "")
+			{
+				if (status == "ativo")
+				{
+					status = "pagamentoandamento";
+				}
+				else
+				{
+					status = "ativo";
+				}
+				using (IDbConnection db = new SqlConnection(@"Server=tcp:gerenciadorbilhetagem.database.windows.net,1433;Initial Catalog=dbCadastro; Uid=fabioesimoes; Pwd=q1w2e3r4@;"))
+				{
+					string update = "UPDATE [dbo].[AspNetUsers]   SET [Status] = @status WHERE CodigoPessoa = @codigo";
+
+					var result = db.Execute(update, new
+					{
+						status,
+						codigo
+					});
+					up = true;
+				}				
+			}
+			return up;
+		}
+
 	}
 }

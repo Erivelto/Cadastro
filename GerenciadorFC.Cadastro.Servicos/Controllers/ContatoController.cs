@@ -37,6 +37,11 @@ namespace GerenciadorFC.Cadastro.Servicos.Controllers
 		{
 			return _repositorio.ObterLista(codigoRep);
 		}
+		[HttpGet("Status/{codigoStatus}")]
+		public bool GetStatus(int codigoStatus)
+		{
+			return _repositorio.AtualizaStatus(codigoStatus);
+		}
 		[HttpDelete]
 		public bool Delete(int codigo)
 		{
