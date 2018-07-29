@@ -24,5 +24,11 @@ namespace GerenciadorFC.Cadastro.Servicos.Controllers
 		{
 			return _repositorio.ObterPorCodigo(codigo);
 		}
+		[HttpGet("UserID/{id}")]
+		public PessoaTermoDeUso Get(string id)
+		{
+			return _repositorio.ObterPorCodigoIdUser(id);
+		}
+
 	}
 }

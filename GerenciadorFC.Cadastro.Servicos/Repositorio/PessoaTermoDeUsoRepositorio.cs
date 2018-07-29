@@ -18,5 +18,9 @@ namespace GerenciadorFC.Cadastro.Servicos.Repositorio
 		{
 			return ctx.Set<PessoaTermoDeUso>().Where(x => x.Codigo == codigo).FirstOrDefault();
 		}
+		public PessoaTermoDeUso ObterPorCodigoIdUser(string id)
+		{
+			return ctx.Set<PessoaTermoDeUso>().Where(x => x.UserId == id).FirstOrDefault();
+		}
 	}
 }
